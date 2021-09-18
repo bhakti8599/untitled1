@@ -1,5 +1,3 @@
-// import 'package:aroundmevendor/data/local/client/localprefsmodel.dart';
-// import 'package:aroundmevendor/main.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:untitled1/data/local/client/localprefsmodel.dart';
@@ -12,11 +10,14 @@ class DioClientNew {
   Dio? client;
 
   DioClientNew() {
-    print('token ${globalSharePrefs!.getString(AccessToken)}');
+    print('token ${globalSharePrefs!.getString(USERToken)}');
 
-    Map<String, dynamic> headers = {};
+    Map<String, dynamic> headers = {
+      'Authorization':'Bearer $globalSharePrefs!.getString(USERToken)}'
+    };
+
     headers['Content-Type'] = 'application/json';
-    headers['x-access-token'] = globalSharePrefs!.getString(AccessToken);
+
     BaseOptions options = BaseOptions(
       baseUrl: BaseUrl.baseUrl,
       connectTimeout: 60000,

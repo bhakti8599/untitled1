@@ -1,12 +1,10 @@
 
 import 'package:mobx/mobx.dart';
-import 'package:untitled1/data/local/client/localprefsmodel.dart';
-import 'package:untitled1/data/network/models/httpreponsehandler.dart';
-import 'package:untitled1/data/network/models/request/assignmentrequest.dart';
-import 'package:untitled1/data/network/models/responce/assignmentresponce.dart';
-import 'package:untitled1/data/network/repository/assignmentrepo.dart';
 
 
+import '../data/network/models/httpreponsehandler.dart';
+import '../data/network/models/responce/assignmentresponce.dart';
+import '../data/network/repository/assignmentrepo.dart';
 import '../main.dart';
 
 part 'deleteuploadsheetviewmodel.g.dart';

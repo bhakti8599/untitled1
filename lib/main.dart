@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:untitled1/ui/splash/splashui.dart';
-import 'package:untitled1/utils/themeutils.dart';
+
+import 'ui/splash/splashui.dart';
+import 'utils/themeutils.dart';
+
 
 SharedPreferences? globalSharePrefs;
 void main() {

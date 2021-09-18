@@ -159,7 +159,7 @@ class _SignUPUIState extends State<SignUPUI> {
                         controller: mobileController,
                         keyboardType: TextInputType.phone,
                         onChanged: signUPViewModel.setMobile,
-                        obscureText: true,
+
                         decoration: InputDecoration(
                             border: UnderlineInputBorder(),
                             filled: true,

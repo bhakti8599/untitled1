@@ -1,7 +1,8 @@
 import 'package:mobx/mobx.dart';
-import 'package:untitled1/data/network/models/httpreponsehandler.dart';
-import 'package:untitled1/data/network/repository/editprofilerepo.dart';
 import 'package:validators/validators.dart';
+
+import '../data/network/models/httpreponsehandler.dart';
+import '../data/network/repository/editprofilerepo.dart';
 
 part 'editprofileviewmodel.g.dart';
 

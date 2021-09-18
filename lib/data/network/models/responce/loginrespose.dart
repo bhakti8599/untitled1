@@ -22,13 +22,7 @@ class LoginResponse {
 class User {
   final String name,email, mobile, role,  created_at, updated_at,email_verified_at;
 
-
-
-
-
-
-  @JsonKey(name: '_id')
-  final String id;
+  final int id;
 
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

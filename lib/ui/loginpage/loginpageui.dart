@@ -168,15 +168,12 @@ class _LoginPageUIState extends State<LoginPageUI> {
                                 ),
                                 onPressed: () {
                                   FocusManager.instance.primaryFocus!.unfocus();
-                                  loginViewModel
-                                      .getLogin(userNameController.text,
-                                          passwordController.text)
-                                      .then((value) async {
+                                  loginViewModel.getLogin(userNameController.text, passwordController.text).then((value) async {
                                     if (value.status == 200) {
                                       await globalSharePrefs!
                                           .setBool(LoginStatus, true);
                                       await globalSharePrefs!.setString(
-                                          AccessToken,
+                                          USERToken,
                                           loginViewModel.loginResponse!.access_token);
                                       await globalSharePrefs!.setString(
                                           StudentId,
@@ -200,7 +197,6 @@ class _LoginPageUIState extends State<LoginPageUI> {
                                   //     new MaterialPageRoute(
                                   //         builder: (BuildContext context) =>
                                   //             EvoluationPlanPageUI()));
-
                                 },
                                 child: Container(
                                     // color: Color(0xFF6B4668),

@@ -72,11 +72,11 @@ abstract class _LoginViewModel with Store {
     }
   }
 
-  Future<HttpResponse> getLogin(String username, String pass) async {
+  Future<HttpResponse> getLogin(String email, String pass) async {
     isLoading = true;
 
     HttpResponse httpResponse =
-        await orderRepo!.login(LoginRequestModel(username, pass));
+        await orderRepo!.login(LoginRequestModel(email, pass));
 
     if (httpResponse.status == 200) {
       loginResponse = httpResponse.data;

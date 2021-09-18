@@ -4,9 +4,9 @@ part 'loginrequest.g.dart';
 
 @JsonSerializable()
 class LoginRequestModel {
-  final String username, password;
+  final String email, password;
 
-  LoginRequestModel(this.username, this.password);
+  LoginRequestModel(this.email, this.password);
   // ignore: prefer_initializing_formals
 
   factory LoginRequestModel.fromJson(Map<String, dynamic> json) =>
